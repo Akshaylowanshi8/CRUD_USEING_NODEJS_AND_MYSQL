@@ -8,7 +8,7 @@ exports.GetAllStudents = async (req, res) => {
   try {
 
     // offset: 6, limit: 5
-    const students = await db.Student.findAll({include:db.Address  }
+    const students = await db.Student.findAll({include:db.Address }
       
     );
     res.status(200).json({ message: "Connection successful", data: students });
